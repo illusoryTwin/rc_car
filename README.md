@@ -15,8 +15,8 @@ ssh nvidia@10.100.20.30
 
 in vsCode
 
-enter password nvidia
+enter password nvidia<br>
 
-sudo /usr/bin/python3.6 /home/nvidia/rc_car/i2c_test.py //0x30
+sudo /usr/bin/python3.6 /home/nvidia/rc_car/i2c_test.py //0x30 <br>
 
-sudo /usr/bin/python3.6 /home/nvidia/rc_car/test_imu.py //acceleration
+sudo /usr/bin/python3.6 /home/nvidia/rc_car/test_imu.py //acceleration <br>
