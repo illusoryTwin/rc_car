@@ -1,7 +1,9 @@
 # car
 
 Wi-fi: InnoRobotiсs // we need to connect exactly to this Wi-Fi
+
 Jetson IP: 10.100.20.30 
+
 (password: nvidia)
 
 TERMINAL: //print these commands
