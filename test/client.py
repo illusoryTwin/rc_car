@@ -1,6 +1,6 @@
-from manager import NetworkManager
-from messages import Message
-from protocol import cmd_msg_struct, reply_msg_struct
+from autonomus_car.car.network.network import NetworkManager
+from autonomus_car.car.messages.message import Message
+from autonomus_car.car.messages.struct import cmd_msg_struct, reply_msg_struct
 
 # IP_ADDRESS = '127.0.0.1'
 # PORT = 5005

@@ -1,7 +1,5 @@
 
-from messages import Message
-from protocol import cmd_msg_struct
-
+from ..messages.message import Message
 
 # DEFINE MESSAGES STRUCTS
 # message struct is the dict with keys as attributes and tuples ('type', size)

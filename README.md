@@ -1,23 +1,28 @@
-# car
+### Autonomous RC Car
 
-Wi-fi: InnoRobotiсs // we need to connect exactly to this Wi-Fi
+This repository is devoted to the development of an autonomous RC Car that is equipped with navigation features such as GPS, a compass, gyroscopes, and accelerometers (IMU). 
 
-Jetson IP: 10.100.20.30 
+<!-- These components allow the car to make quick and accurate navigational decisions in order to reach its destination with minimal input from the user. Furthermore, the car's autonomous capabilities are enhanced by its ability to process data from its environment in real-time. -->
 
-(password: nvidia)
+#### The Structure of Repository
+The code is organized as follows:
 
-TERMINAL: //print these commands
-
-ifconfig
-
-ssh nvidia@10.100.20.30 
-
-
-in vsCode
-
-enter password nvidia<br>
-
-sudo /usr/bin/python3.6 /home/nvidia/rc_car/i2c_test.py<br>
-#0x30 <br>
-
-sudo /usr/bin/python3.6 /home/nvidia/rc_car/test_imu.py //acceleration <br>
+```bash
+├── communication # communication modules
+│   ├── network.py # manager for network
+│   └── serial.py # serial manager
+├── hardware # hardware interfaces 
+│   ├── gps.py
+│   ├── ...
+│   └── servo.py
+├── messages # the module to facilitate messages 
+│   ├── message.py
+│   ├── ...
+│   └── struct.py # the message structures
+└── tests # scripts to test different modules
+    ├── client.py
+    ├── imu.py
+    ├── ...
+    ├── client.py
+    └── server.py
+```
