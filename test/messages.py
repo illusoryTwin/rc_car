@@ -1,5 +1,5 @@
 
-from ..messages.message import Message
+from message import Message
 
 # DEFINE MESSAGES STRUCTS
 # message struct is the dict with keys as attributes and tuples ('type', size)
@@ -28,12 +28,17 @@ tx_msg.angle = 3.5454,
 tx_msg.pwm = range(4)
 tx_msg.gyro = [-1243.141, 2331.556, 1/3]
 
+print(f'Attributes of "transived" message before "unpack":')
+for key in msg_struct.keys():
+    print(f' {key}: {getattr(tx_msg, key)}')
+
 # to convert msg to bytes (for instance to send over network) use:
 tx_msg.pack()
 # now you may find the bytes in .bytes attribute
 tx_bytes = tx_msg.bytes 
 print(f'The size raw bytes in message: {tx_msg.bytes}\n')
 
+# SIGNAL WAS TRANSMITTED
 
 # if you "receive" bytes for this specific msg you may populate its attributes with: 
 rx_msg = Message(message_struct=msg_struct)
@@ -42,7 +47,9 @@ for key in msg_struct.keys():
     print(f' {key}: {getattr(rx_msg, key)}')
 # set bytes to "recived" bytes
 rx_msg.bytes = tx_bytes 
+# print(rx_msg.bytes)
 rx_msg.unpack()
+print(rx_msg.cmd_id )
 print(f'\nAttributes of "received" message after "unpack":')
 for key in msg_struct.keys():
     print(f' {key}: {getattr(rx_msg, key)}')

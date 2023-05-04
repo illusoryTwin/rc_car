@@ -1,13 +1,14 @@
 from time import perf_counter
-from autonomus_car.car.network.network import NetworkManager
-from autonomus_car.car.messages.message import Message
-from autonomus_car.car.messages.struct import cmd_msg_struct, reply_msg_struct
+from car.communication.network import NetworkManager
+from car.messages.message import Message
+from car.messages.msg_struct import cmd_msg_struct, reply_msg_struct
 
 # IP_ADDRESS = '127.0.0.1'
 # PORT = 5005
 
 network_manager = NetworkManager(client = False, 
                                  timeout=0.1)
+
 udp_commands = Message(message_struct = cmd_msg_struct)
 udp_reply = Message(message_struct = reply_msg_struct)
 

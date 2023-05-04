@@ -1,6 +1,7 @@
-from autonomus_car.car.network.network import NetworkManager
-from autonomus_car.car.messages.message import Message
-from autonomus_car.car.messages.struct import cmd_msg_struct, reply_msg_struct
+from car.communication.network import NetworkManager
+from car.messages.message import Message
+from car.messages.msg_struct import cmd_msg_struct, reply_msg_struct
+
 
 # IP_ADDRESS = '127.0.0.1'
 # PORT = 5005
@@ -36,3 +37,4 @@ finally:
     # DO SOMETHING IN END - TURNOFF VEHICLE 
     print('Exit....')
     
+
