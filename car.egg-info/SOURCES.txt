@@ -1,7 +1,0 @@
-README.md
-setup.py
-car.egg-info/PKG-INFO
-car.egg-info/SOURCES.txt
-car.egg-info/dependency_links.txt
-car.egg-info/requires.txt
-car.egg-info/top_level.txt

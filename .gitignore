@@ -1,0 +1,9 @@
+.idea/
+*__pycache__*
+*.egg-info
+*.code-workspace
+build
+*.so
+*.cprof
+*.calltree
+*settings.json
