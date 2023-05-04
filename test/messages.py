@@ -1,5 +1,5 @@
 
-from message import Message
+from car.messages.message import Message
 
 # DEFINE MESSAGES STRUCTS
 # message struct is the dict with keys as attributes and tuples ('type', size)
